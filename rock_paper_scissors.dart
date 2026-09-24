@@ -27,3 +27,12 @@ String kuhaonAngPangalanSaPlayer(String promptNgaText, String defaultNgaName) {
   }
   return pangalan;
 }
+
+/// Return ang valid nga move kung valid ang input, otherwise return null.
+String? validateSiMove(String? angGisulod) {
+  String lihok = angGisulod?.trim().toLowerCase() ?? '';
+  if (mgaPilianan.contains(lihok)) {
+    return lihok;
+  }
+  return null;
+}
